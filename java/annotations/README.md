@@ -1,6 +1,6 @@
 [<small>Zurück zur Übersicht</small>](../../README.md)
 
-# Annotationen in Java
+# Java: Annotationen
 
 ### Was sind Annotationen?
 

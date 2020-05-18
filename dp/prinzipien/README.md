@@ -1,6 +1,7 @@
-[<small>Zurück zur Übersicht</small>](../../README.md)
+[<small>Zurück zu *Design Patterns*</small>](../)  
+[<small>Zurück zur Übersicht</small>](../../)
 
-# Design Patterns - Designprinzipien
+# Design Patterns: Designprinzipien
 
 #### 1. Encapsulate what varies
 

@@ -1,4 +1,5 @@
-[<small>Zurück zur Übersicht</small>](../../README.md)
+[<small>Zurück zu *Design Patterns*</small>](../)  
+[<small>Zurück zur Übersicht</small>](../../)
 
 # Factory Pattern
 
