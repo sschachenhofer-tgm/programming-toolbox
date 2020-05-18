@@ -1,4 +1,4 @@
-[Zurück zur Übersicht](../../README.md)
+[<small>Zurück zur Übersicht</small>](../../README.md)
 
 # Spring Boot: Konfiguration
 

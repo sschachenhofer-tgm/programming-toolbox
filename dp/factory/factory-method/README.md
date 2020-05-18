@@ -1,6 +1,6 @@
 [<small>Zurück zum *Factory Pattern*</small>](../)  
 [<small>Zurück zu *Design Patterns*</small>](../../)  
-[<small>Zurück zur Übersicht</small>](../../../)
+[<small>Zurück zur Übersicht</small>](../../../README.md)
 
 # Factory Method Pattern
 
