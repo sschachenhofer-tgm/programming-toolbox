@@ -26,6 +26,17 @@ Das Decorator Pattern bietet die Möglichkeit, Erweiterungen für eine Basisklas
 
 
 
+### Designprinzipien
+
+Die folgenden [Designprinzipien](../prinzipien/) werden vom Decorator Pattern umgesetzt:
+
+- **Extension > Modification** (*Classes should be open for extension, but closed for modification*): Das ist das zentrale Prinzip des Decorator Patterns. Durch die Erweiterungen kann das Verhalten von Klassen angepasst werden – ohne, dass die Basisklassen verändert werden müssen.
+- **Interface > implementation** (*Program to an interface, not an implementation*): Durch das gemeinsame Interface wird erreicht, dass jede Erweiterung (*Decorator*) nicht nur Basisklassen, sondern auch andere Erweiterungen einpacken kann.
+- **Composition > inheritance** (*Favor composition over inheritance*): Im Decorator-Pattern gibt es zwar eine Vererbungsstruktur, aber nur, damit ein gemeinsames Interface existiert. Das „Einpacken“ funktioniert nicht über eine Subklasse, sondern über Komposition (mit einer Referenz auf das eingepackte Objekt).
+- **Encapsulate what varies** (*Identify the aspects of your application that vary and separate them from what stays the same*): Beim Decorator-Pattern werden die Basisklassen von den Erweiterungen getrennt. Das ist zwar nicht exakt das, was dieses Designprinzip aussagt, geht aber in die Richtung.
+
+
+
 ### Begriffe für die Klassen
 
 - **Component**: Das ist das Interface, das **von allen Klassen implementiert** wird - von Basisklassen genauso wie von Erweiterungen. Damit sind Basisklassen und Erweiterungen **austauschbar**.
@@ -85,12 +96,26 @@ public class Steak implements Dish {
 
 #### Die abstrakte Klasse Decorator: SideDish
 
-SideDish ist die abstrakte Klasse, die als gemeinsame Schnittstelle für alle Concrete Decorators fungiert. Sie fügt keine Implementierungen für die Methoden `getDescription()` und `getPrice()` ein (diese Methoden werden erst in den Concrete Decorators implementiert), aber sie legt ein Attribut `inner` fest, das auf das eingepackte Objekt verweist. Damit dieses Attribut auch vererbt wird, kann es nicht `private` sein.
+SideDish ist die abstrakte Klasse, die als gemeinsame Schnittstelle für alle Concrete Decorators fungiert. Sie legt ein Attribut `inner` fest, das auf das eingepackte Objekt verweist. Dieses Attribut ist `private`.
+
+Damit trotzdem mit dem eingepackten Objekt gearbeitet werden kann (obwohl es nicht an die *Concrete Decorators* vererbt wird), muss die abstrakte Decorator-Klasse die Methoden des *Component*-Interfaces sowie einen Konstruktor implementieren.
 
 ``````java
 public abstract class SideDish implements Dish {
     
-    protected Dish inner;
+    private Dish inner;
+    
+    public SideDish(Dish inner) {
+        this.inner = inner;
+    }
+    
+    public getDescription() {
+        return this.inner.getDescription();
+    }
+    
+    public getPrice() {
+        return this.inner.getPrice();
+    }
 }
 ``````
 
@@ -106,22 +131,24 @@ Es kann einfach nur eine Hauptspeise eingepackt werden. Wenn ein Gast aber zwei 
 public class Potatoes {
     
     public Potatoes(Dish inner) {
-        this.inner = inner;
+        super(inner);
     }
     
     public String getDescription() {
-        return this.inner.getDescription() + " with potatoes";
+        return super.getDescription() + " with potatoes";
     }
     
     public float getPrice() {
-        return this.inner.getPrice() + 2.40;
+        return super.getPrice() + 2.40;
     }
 }
 ``````
 
+Hier sieht man gut wie die Erweiterung funktionieren kann: In der Klasse Potatoes wird zuerst die entsprechende Methode des eingepackten Objekts aufgerufen, dann wird noch eigener Code hinzugefügt.
+
+Weil das Attribut `inner` der abstrakten `SideDish`-Klasse `private` ist, kann es von hier aus nicht direkt aufgerufen werden. Stattdessen muss `super` benutzt werden, um den Konstruktor bzw. die Methoden der Superklasse aufzurufen.
 
 
-Hier sieht man gut wie die Erweiterung funktionieren kann: In der Klasse Potatoes wird zuerst die entsprechende Methode des eingepackten Objekts (`this.inner`) aufgerufen, dann wird noch eigener Code hinzugefügt.
 
 #### Eine mögliche Verwendung
 
