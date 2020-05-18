@@ -6,7 +6,7 @@
 
 Die wichtigsten Prinzipien, die man bei objektorientierter Entwicklung immer im Hinterkopf behalten sollte.
 
-[Design-Prinzipien](dp/prinzipien/)
+[Design-Prinzipien](prinzipien/)
 
 
 
@@ -14,8 +14,8 @@ Die wichtigsten Prinzipien, die man bei objektorientierter Entwicklung immer im 
 
 Design Patterns zur Erzeugung von Objekten.
 
-- [Factory Pattern](dp/factory/)
-- [Singleton](dp/singleton/)
+- [Factory Pattern](factory/)
+- [Singleton](singleton/)
 
 
 
@@ -24,8 +24,8 @@ Design Patterns zur Erzeugung von Objekten.
 Design Patterns, die einheitliche und damit leichter zu erstellende und leichter zu verstehende Klassenstrukturen festlegen.
 
 
-- [Decorator Pattern](dp/decorator/)
-- [*MVC Pattern*\*](dp/mvc/)
+- [Decorator Pattern](decorator/)
+- *MVC Pattern*\*
 
 
 
@@ -33,7 +33,7 @@ Design Patterns, die einheitliche und damit leichter zu erstellende und leichter
 
 Design Patterns, die dazu da sind, ein bestimmtes Verhalten zu ermöglichen.
 
-- [Observer Pattern](dp/observer/)
-- [Strategy Pattern](dp/strategy/)
-- [*Command Pattern*\*](dp/command/)
-- [*Iterator Pattern*\*](dp/iterator/)
+- [Observer Pattern](observer/)
+- [Strategy Pattern](strategy/)
+- *Command Pattern*\*
+- *Iterator Pattern*\*
