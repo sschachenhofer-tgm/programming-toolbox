@@ -30,6 +30,12 @@ Design Patterns, die dazu da sind, ein bestimmtes Verhalten zu ermöglichen.
 
 
 
+## Java – Verschiedenes
+
+- [Annotationen](java/annotations/)
+
+
+
 ## SpringBoot
 
 [Beantwortete Fragen](springboot/README.md)
