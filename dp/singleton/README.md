@@ -1,8 +1,6 @@
-# Das Singleton-Pattern
+[<small>Zurück zur Übersicht</small>](../../README.md)
 
-<small>Simon Schachenhofer, 5CHIT</small>
-
-
+# Singleton Pattern
 
 ## In a nutshell
 
