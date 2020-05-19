@@ -9,18 +9,12 @@ import java.io.IOException;
  */
 public class Authentication extends Decorator {
 
-    /*
-     * Eine Referenz auf das nächstinnere TextReader-Objekt, um Methodenaufrufe an dieses
-     * weiterzuleiten.
-     */
-    private TextReader inner;
-
     public Authentication(TextReader inner) {
-        this.inner = inner;
+        super(inner);
     }
 
 
-	public void write(String[] s) {
+    public void write(String[] s) {
         //Ausgeben von "PASSWORD:       "
         System.out.print("PASSWORD:\t\t");
 
@@ -31,10 +25,10 @@ public class Authentication extends Decorator {
             e.printStackTrace();
         }
 
-        this.inner.write(s);
-	}
+        super.write(s);
+    }
 
-	public void read(String[] s) {
+    public void read(String[] s) {
         /*
          * Um den verschlüsselten String und zusätzlich das Passwort an Scrambling zu übergeben,
          * muss ein neues String-Array mit zwei Elementen angelegt werden.
@@ -51,7 +45,7 @@ public class Authentication extends Decorator {
             e.printStackTrace();
         }
 
-        this.inner.read(sNew);
-	}
+        super.read(sNew);
+    }
 
 }

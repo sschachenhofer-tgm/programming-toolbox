@@ -11,10 +11,18 @@ public abstract class Decorator implements TextReader {
      * an dieses weiterleiten zu können. Dabei ist es egal, ob das innere Objekt wieder ein
      * Decorator ist oder nicht, weil alle Decorators und Cores von der selben Klasse erben:
      * TextReader.
-     *
-     * Warum das Attribut hier als private deklariert ist, ist mir nicht ganz klar... Damit wird
-     * es nämlich nicht an die Decorator-Implementierungen vererbt und ist nutzlos...
      */
-	private TextReader inner;
-
+    private TextReader inner;
+    
+    public Decorator(TextReader inner) {
+        this.inner = inner;
+    }
+    
+    public void write(String[] s) {
+        this.inner.write(s);
+    }
+    
+    public void read(String[] s) {
+        this.inner.read(s);
+    }
 }
