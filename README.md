@@ -16,6 +16,14 @@ Verschiedene kurze Zusammenfassungen und Erklärungen zu Java-spezifischen Theme
 
 
 
+## Python – Verschiedenes
+
+Verschiedene kurze Zusammenfassungen und Erklärungen zu Python-spezifischen Themen.
+
+[Python – Verschiedenes](python/)
+
+
+
 ## SpringBoot
 
 Spring Boot ist ein (durchaus komplexes, aber weit verbreitetes) Java-Framework für Webserver.
