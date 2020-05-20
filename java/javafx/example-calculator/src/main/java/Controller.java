@@ -3,8 +3,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-import java.util.List;
-
 public class Controller {
 
     private Model model;
@@ -16,10 +14,6 @@ public class Controller {
     @FXML private ComboBox<String> operation;
     @FXML private Label statusBar;
 
-    /*
-     * Ein per Lambda-Funktion implementiertes Runnable-Objekt, das den Text aus dem Label löscht.
-     */
-
     /**
      * Initialisieren des Controller-Objekts
      *
@@ -29,7 +23,7 @@ public class Controller {
      * verwendet werden.
      */
     public Controller() {
-        // Create a model
+        // Erstellen des Models
         this.model = new Model();
     }
 
@@ -64,17 +58,16 @@ public class Controller {
             int result;
 
             switch (this.operation.getSelectionModel().getSelectedItem()) {
-                case "+":
-                    // Perform an addition
+                case "+":  // Addition
                     result = this.model.performAddition(n1, n2);
                     break;
                 case "-":  // Perform a division
                     result = this.model.performSubtraction(n1, n2);
                     break;
-                case "*":
+                case "*":  // Multiplikation
                     result = this.model.performMultiplication(n1, n2);
                     break;
-                case "/":
+                case "/":  // Division
                     result = this.model.performDivision(n1, n2);
                     break;
                 default:

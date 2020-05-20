@@ -122,7 +122,7 @@ Um vom Controller aus auf die GUI-Elemente zuzugreifen, bietet JavaFX die Mögli
 
 Im *Scene Builder* muss man dazu für alle Elemente, auf die man vom Controller aus zugreifen möchte, eine ID (`fx:id`) festlegen. Das kann man auf der rechten Seite im Tab *Code*:
 
-![image-20200520125731344](D:\Dokumente\Programming\Toolbox\java\javafx\img\scenebuilder_fxid.png)
+![Festlegen der fx:id](img/scenebuilder_fxid.png)
 
 In FXML wird daraus:
 
@@ -227,7 +227,7 @@ Um diesen Fehler zu beheben, kann man den Code, der auf die GUI zugreift, stattd
 
 [1]	[Class Application - launch(); abgerufen am 20.5.2020](https://docs.oracle.com/javase/10/docs/api/javafx/application/Application.html#launch(java.lang.String...))  
 [2]	[Class Application; abgerufen am 20.5.2020](https://docs.oracle.com/javase/10/docs/api/javafx/application/Application.html)  
-[3]	[JavaFX Scene Builder: Getting Started with JavaFX Scene Builder; abgerufen am 20.5.2020](JavaFX Scene Builder: Getting Started with JavaFX Scene Builder)  
+[3]	[JavaFX Scene Builder: Getting Started with JavaFX Scene Builder; abgerufen am 20.5.2020](https://docs.oracle.com/javafx/scenebuilder/1/get_started/bind-ui-to-logic.htm)  
 [4]	[Introduction to FXML; abgerufen am 20.5.2020](https://docs.oracle.com/javase/10/docs/api/javafx/fxml/doc-files/introduction_to_fxml.html#fxml_annotation)  
 [5]	[Introduction to FXML; abgerufen am 20.5.2020](https://docs.oracle.com/javase/10/docs/api/javafx/fxml/doc-files/introduction_to_fxml.html#controller_method_event_handlers)  
 [6]	[Annotation Type FXML; abgerufen am 20.5.2020](https://docs.oracle.com/javase/10/docs/api/javafx/fxml/FXML.html)  

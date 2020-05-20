@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Eine einfache Model-Klasse. Wie die Model-Klasse genau aufgebaut ist, hängt mit JavaFX nicht zusammen und kann für
+ * jede Anwendung frei festgelegt werden. Deswegen werden die einzelnen Methoden hier nicht näher erklärt.
+ */
 public class Model {
 
     private List<String> calculations;
