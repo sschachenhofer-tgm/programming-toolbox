@@ -29,13 +29,13 @@ designer
 
 Es öffnet sich ein kleines Fenster - hier wählt man normalerweise *Main Window* aus:
 
-![image-20191217135240671](D:\Dokumente\_Schule\SEW\img\1.png)
+![Startfenster im Designer](img/designer_start.png)
 
 Im Designer kann man sich dann sein Layout zusammenbasteln, wie man es haben möchte. Für einfache Layouts bieten sich vor allem die Layouts *Vertical Layout* und *Horizontal Layout* an.
 
 Rechts im *Object Inspector* sollte man die einzelnen Elemente der GUI sinnvoll benennen – die Namen, die dort stehen, werden später auch im Quelltext benutzt.
 
-![image-20191217135943157](D:\Dokumente\_Schule\SEW\img\2.png)
+![Der Designer](img/designer_main.png)
 
 Wenn man fertig ist, speichert der Designer das Layout als `.ui`-Datei ab. Daraus muss man ein Python-Modul erstellen. PyQt bietet dafür das Script `pyuic5`, das sich so nutzen lässt:
 
@@ -122,15 +122,15 @@ Man kann Slots aus der GUI nützen und damit GUI-Elemente untereinander verknüp
 
 Signals und Slots können einfach im Designer verbunden werden. Es gibt dafür sogar einen eigenen Modus, den man oben in der Toolbar einschalten kann. Man sieht dann alle Verbindungen zwischen Signals und Slots, die aktuell existieren:
 
-![image-20191217143428058](D:\Dokumente\_Schule\SEW\img\3.png)
+![Signals und Slots im Designer](img/signals_slots.png)
 
 Um eine neue Verbindung zu erstellen, zieht man einfach vom Element, von dem das *Signal* kommt, zu dem Element, in dem der *Slot* definiert ist. Bei selbst erstellten Slots (die im Controller stehen sollten) zieht man auf das MainWindow. Es öffnet sich ein Fenster:
 
-![image-20191217143648842](D:\Dokumente\_Schule\SEW\img\4.png)
+![Signals und Slots](img/signals_slots2.png)
 
 Links wählt man das Signal aus, rechts den Slot. Es werden nur die Slots angezeigt, die mit dem Signal kompatibel sind. Um einen neuen, selbst erstellten Slot hinzuzufügen, klickt man auf *Edit…* und trägt den Slot selbst in die Liste ein:
 
-![image-20191217143905235](D:\Dokumente\_Schule\SEW\img\5.png)
+![Signals und Slots](img/signals_slots3.png)
 
 Jetzt einfach die Eingaben bestätigen und die Verbindung zwischen Signal und Slot steht!
 
