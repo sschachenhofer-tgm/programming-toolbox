@@ -92,16 +92,32 @@ Das (nach meiner Nummerierung) vierte [Design-Prinzip](../prinzipien/) besagt: *
 
 Anmerkung: Im folgenden Beispiel wurde das Pull-Prinzip verwendet.  
 
-#### Das Interface Subject
+#### Die abstrakte Klasse `Subject`
 
-Das Subject definiert nur die drei wichtigen, allgemeinen Methoden `registerObserver()`, `deregisterObserver()` und `notifyObservers()`
+Die abstrakte Klasse Subject implementiert nur die drei wichtigen, allgemeinen Methoden `registerObserver()`, `deregisterObserver()` und `notifyObservers()`.
 
 ```java
-public interface Subject {
+public abstract class Subject {
 
-	void registerObserver(Observer o);
-	void removeObserver(Observer o);
-	void notifyObservers();
+    private List<Observer> observers;
+
+    public Subject() {
+        this.observers = new ArrayList<>();
+    }
+
+	public void registerObserver(Observer o) {
+        this.observers.add(o);
+    }
+
+	public void deregisterObserver(Observer o) {
+	    this.observers.remove(o);
+    }
+
+	public void notifyObservers() {
+	    for (Observer o : this.observers) {
+	        o.update();
+        }
+    }
 }
 ```
 
@@ -115,7 +131,6 @@ Die Klasse WeatherData verwaltet Wetterdaten: Temperatur, Luftfeuchtigkeit und L
 private float temperature;
 private float humidity;
 private float pressure;
-private ArrayList<Observer> observers;
 ``````
 
 Sie hat also Methoden, um die Werte zu setzen und auszulesen
@@ -125,39 +140,25 @@ public void setMeasurements(float temperature, float humidity, float pressure) {
     this.temperature = temperature;
     this.humidity = humidity;
     this.pressure = pressure;
-    measurementsChanged();
+
+    // Die Observer über die Datenänderung benachrichtigen
+    super.notifyObservers();
 }
 
 public float getTemperature() {
-    return temperature;
+    return this.temperature;
 }
 
 public float getHumidity() {
-    return humidity;
+    return this.humidity;
 }
 
 public float getPressure() {
-    return pressure;
+    return this.pressure;
 }
 ```
 
-Außerdem implementiert WeatherData die Methoden `registerObserver()`, `deregisterObserver()` und `notifyObservers()` vom Interface Subject:
-
-```java
-public void registerObserver(Observer o) {
-    this.observers.add(o);
-}
-
-public void removeObserver(Observer o) {
-    this.observers.remove(o);
-}
-
-public void notifyObservers() {
-    for (Observer o : this.observers) {
-        o.update();
-    }
-}
-```
+Wenn `setMeasurements()` aufgerufen wird, werden alle Observer über die Methode `notifyObservers()` der abstrakten Superklasse `Subject` aufgerufen.
 
 
 
@@ -183,7 +184,7 @@ Im Konstruktor wird ein WeatherData-Objekt übergeben. Dieses Objekt wird beim P
 ``````java
 public CurrentConditionsDisplay(WeatherData weatherData) {
     this.weatherData = weatherData;
-    weatherData.registerObserver(this);
+    this.weatherData.registerObserver(this);
 }
 ``````
 
@@ -201,7 +202,7 @@ public void update() {
 
 ``````java
 public void display() {
-    System.out.println("Current conditions: " + temperature 
-    + "° F degrees and " + humidity + "% humidity");
+    System.out.println(String.format("Current conditions: %f ° C and %f %% humidity",
+                                     this.temperature, this.humidity));
 }
 ``````
