@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="observer.weather.CurrentConditionsJavaFXDisplayController">
+    <children>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aktuelle Wetterdaten" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+            <VBox.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </VBox.margin>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Temperatur">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Text>
+        <Text fx:id="temperatureText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <VBox.margin>
+                <Insets bottom="30.0" />
+            </VBox.margin>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Luftdruck">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Text>
+        <Text fx:id="pressureText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <VBox.margin>
+                <Insets bottom="30.0" />
+            </VBox.margin>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Luftfeuchtigkeit">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Text>
+        <Text fx:id="humidityText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <VBox.margin>
+                <Insets bottom="30.0" />
+            </VBox.margin>
+        </Text>
+        <HBox>
+            <children>
+                <Text fx:id="statusText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </HBox>
+    </children>
+</VBox>
