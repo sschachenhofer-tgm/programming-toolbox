@@ -8,5 +8,5 @@ public interface DisplayElement {
 	/**
 	 * Zeigt die Wetterdaten an.
 	 */
-	public void display();
+	void display();
 }

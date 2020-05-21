@@ -1,22 +1,21 @@
 package observer.weather;
 
-import java.util.*;
-
 public class ForecastDisplay implements Observer, DisplayElement {
+
 	private float currentPressure = 29.92f;  
 	private float lastPressure;
 	private WeatherData weatherData;
 
 	public ForecastDisplay(WeatherData weatherData) {
 		this.weatherData = weatherData;
-		weatherData.registerObserver(this);
+		this.weatherData.registerObserver(this);
 	}
 
 	public void update() {
-		lastPressure = currentPressure;
-		currentPressure = this.weatherData.getPressure();
+		this.lastPressure = this.currentPressure;
+		this.currentPressure = this.weatherData.getPressure();
 
-		display();
+		this.display();
 	}
 
 	public void display() {

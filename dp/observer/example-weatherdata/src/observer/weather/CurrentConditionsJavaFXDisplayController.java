@@ -20,6 +20,8 @@ public class CurrentConditionsJavaFXDisplayController {
     @FXML private Text humidityText;
     @FXML private Text statusText;
 
+    private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd. MM yyyy, HH:mm:ss");
+
     //Es wird ein Default-Konstruktor verwendet. Objekte dieser Klasse benötigen keine Referenz auf andere Objekte.
 
     /**
@@ -59,7 +61,6 @@ public class CurrentConditionsJavaFXDisplayController {
      * @since 2019-03-11
      */
     public void updateStatus() {
-        Platform.runLater(() -> this.statusText.setText("Stand: " +
-                new SimpleDateFormat("dd. MM yyyy, HH:mm:ss").format(new Date())));
+        Platform.runLater(() -> this.statusText.setText(String.format("Stand: %s", DATE_FORMAT.format(new Date()))));
     }
 }

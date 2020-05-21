@@ -6,7 +6,7 @@ package observer.weather;
  *
  * Das verwendete Prinzip ist hier das Pull-Prinzip. Das bedeutet, dass das Subject mit der Benachrichtigung
  * keine Daten übergibt. Stattdessen kann der Observer die Daten über die Getter-Methoden abrufen.
- * Die andere Möglichkeit wäre das Pull-Prinzip, wobei der Aufrufer nicht nur benachrichtigt wird , sondern auch die
+ * Die andere Möglichkeit wäre das Push-Prinzip, wobei der Aufrufer nicht nur benachrichtigt wird , sondern auch die
  * Daten gleich übergeben bekommt.
  * Das Pull-Prinzip wird in der Praxis häufiger verwendet.
  */
