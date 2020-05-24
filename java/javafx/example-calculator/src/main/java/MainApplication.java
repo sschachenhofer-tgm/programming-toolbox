@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 public class MainApplication extends Application {
 
     /**
-     * In dieser Methode könnte man Code zur Initialisierung der GUI/Anwendun ausführen. init() wird immer ausgeführt,
+     * In dieser Methode könnte man Code zur Initialisierung der GUI/Anwendung ausführen. init() wird immer ausgeführt,
      * bevor die Anwendung mit start() gestartet wird.
      */
     @Override

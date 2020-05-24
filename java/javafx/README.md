@@ -5,7 +5,7 @@
 
 JavaFX ist die Standard-Library zum Erstellen von GUIs in Java und hat die ältere *Swing*-Library abgelöst. JavaFX sollte standardmäßig in jedem neueren JDK enthalten sein.
 
-Dieses Dokument erklärt die wichtigsten Punkte von JavaFX anhand einer einfachen MVC-Anwendung. Der komplette Code ist [hier](TODO) verfügbar.
+Dieses Dokument erklärt die wichtigsten Punkte von JavaFX anhand einer einfachen MVC-Anwendung. Der komplette Code ist [hier](example-calculator/) verfügbar.
 
 
 
@@ -68,6 +68,12 @@ public void start(Stage primaryStage) throws Exception{
 ``````
 
 Zum Starten der Anwendung wird in einer `main()`-Methode (die auch zur Anwendungsklasse gehören kann) die statische Methode `launch()` der abstrakten `Application`-Klasse aufgerufen. Diese Methode erstellt eine Instanz der Anwendungsklasse, ruft die `start()`-Methode auf und startet damit die Anwendung. <sup>[[1]](#Quellen)</sup>
+
+``````java
+public static void main(String args[]) {
+    launch(args);
+}
+``````
 
 
 
