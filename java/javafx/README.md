@@ -1,5 +1,5 @@
-[Zurück zur Übersicht](../../README.md)  
-[Zurück zu *Java*](../)
+[&larr; Zurück zu *Java*](../)  
+[&larr; Zurück zur Übersicht](../../README.md)
 
 # Java: GUIs erstellen mit JavaFX
 

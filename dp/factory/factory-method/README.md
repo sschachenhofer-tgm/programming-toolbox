@@ -1,10 +1,10 @@
-[<small>Zurück zum *Factory Pattern*</small>](../)  
-[<small>Zurück zu *Design Patterns*</small>](../../)  
-[<small>Zurück zur Übersicht</small>](../../../README.md)
+[&larr; Zurück zum *Factory Pattern*](../)  
+[&larr; Zurück zu *Design Patterns*](../../)  
+[&larr; Zurück zur Übersicht](../../../README.md)
 
 # Factory Method Pattern
 
-[<small>Zum *Abstract Factory Pattern*</small>](../abstract-factory/)
+[&rarr; Zum *Abstract Factory Pattern*](../abstract-factory/)
 
 ### Problembeschreibung
 

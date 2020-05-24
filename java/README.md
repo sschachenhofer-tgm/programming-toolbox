@@ -1,4 +1,4 @@
-<small>[Zurück zur Übersicht](../README.md)</small>
+[&larr; Zurück zur Übersicht](../README.md)
 
 # Java
 

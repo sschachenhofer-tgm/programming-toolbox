@@ -1,5 +1,5 @@
-[<small>Zurück zur Übersicht</small>](../../README.md)  
-[<small>Zurück zu *Python*</small>](../)
+[&larr; Zurück zu *Python*](../)
+[&larr; Zurück zur Übersicht](../../README.md)
 
 # Python: GUIs erstellen mit PyQt
 

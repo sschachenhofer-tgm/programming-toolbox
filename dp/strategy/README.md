@@ -1,5 +1,5 @@
-[<small>Zurück zu *Design Patterns*</small>](../)  
-[<small>Zurück zur Übersicht</small>](../../README.md)
+[&larr; Zurück zu *Design Patterns*](../)  
+[&larr; Zurück zur Übersicht](../../README.md)
 
 # Strategy Pattern
 

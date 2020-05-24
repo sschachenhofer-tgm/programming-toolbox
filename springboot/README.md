@@ -1,4 +1,4 @@
-[<small>Zurück zur Übersicht</small>](../README.md)
+[&larr; Zurück zur Übersicht](../README.md)
 
 # Spring Boot
 
