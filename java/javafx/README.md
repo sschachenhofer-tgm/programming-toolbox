@@ -59,7 +59,7 @@ Der Code dazu sieht zum Beispiel so aus:
 
 ``````java
 @Override
-public void start(Stage primaryStage) throws Exception{
+public void start(Stage primaryStage) throws Exception {
     Parent root = FXMLLoader.load(getClass().getResource("layout.fxml"));
     primaryStage.setTitle("Calculator");
     primaryStage.setScene(new Scene(root, 300, 275));
@@ -70,8 +70,8 @@ public void start(Stage primaryStage) throws Exception{
 Zum Starten der Anwendung wird in einer `main()`-Methode (die auch zur Anwendungsklasse gehören kann) die statische Methode `launch()` der abstrakten `Application`-Klasse aufgerufen. Diese Methode erstellt eine Instanz der Anwendungsklasse, ruft die `start()`-Methode auf und startet damit die Anwendung. <sup>[[1]](#Quellen)</sup>
 
 ``````java
-public static void main(String args[]) {
-    launch(args);
+public static void main(String[] args) {
+    Application.launch(args);
 }
 ``````
 

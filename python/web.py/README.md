@@ -36,7 +36,7 @@ Man gibt jeweils die URL des Endpoints und dann den Namen der zuständigen Handl
 ``````python
 urls = (
     "/", "RootHandler",
-	"/hallo", "HalloHandler",
+    "/hallo", "HalloHandler",
     "/test", "TestHandler"
 )
 ``````
@@ -91,7 +91,7 @@ Wenn man sich beim Endpoint *GET /hallo* einen Query-Parameter *name* erwartet, 
 
 ``````python
 class HalloHandler:
-	def GET(self):
+    def GET(self):
         name = web.input()["name"]
 ``````
 
@@ -99,7 +99,7 @@ Es gibt auch noch eine zweite Möglichkeit: Auf die Parameter kann auch wie auf 
 
 ``````python
 class HalloHandler:
-	def GET(self):
+    def GET(self):
         name = web.input().name
 ``````
 
