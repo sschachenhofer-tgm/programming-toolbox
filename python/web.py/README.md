@@ -106,6 +106,17 @@ class HalloHandler:
 
 
 
-### Das war‘s auch schon.
+### Starten des Servers
+
+Der Server wird in einem `__main__`-Block folgendermaßen gestartet:
+
+``````python
+if __name__ == "__main__":
+    web.application(urls, globals()).run()
+``````
+
+
+
+## Das war‘s auch schon.
 
 web.py kann noch viel mehr (zum Beispiel Datenbankzugriff oder Templating), aber da würde ich dann doch lieber ein richtiges Web-Framework wie Django oder Flask nehmen…
