@@ -41,7 +41,7 @@ urls = (
 )
 ``````
 
-**Zwei Anmerkungen dazu**:
+Zwei Anmerkungen dazu:
 
 - Ja, das ist wirklich ein `tuple` und kein `dict`. Ein `dict` würde zwar hundertmal mehr Sinn machen, wenn es darum geht, jeweils zwei Werte einander zuzuordnen, aber die Entwickler von web.py haben sich trotzdem für ein `tuple` entschieden…
 - Ja, man gibt wirklich den Klassennamen als String an, nicht die Klasse selbst.
@@ -69,12 +69,11 @@ Um Requests an die Endpoints zu beantworten, muss man dann Klassen erstellen, di
       def PUT(self):
           """Beantwortet HTTP-Requests an PUT /hallo"""
           return "Das ist ein PUT-Request"
-      
-      # Alle anderen HTTP-Methoden (DELETE, PATCH, OPTIONS,...) werden NICHT
-      # beantwortet, weil dafür keine Methoden definiert wurden.
   ``````
+  
+  Alle anderen HTTP-Methoden (`DELETE`, `PATCH`, `OPTIONS`,...) werden **nicht** beantwortet, weil dafür keine Methoden definiert wurden.
 
-**Anmerkung**: Ja, die Methodennamen sind wirklich in Großbuchstaben. Nein, das entspricht überhaupt nicht den gängigen Python-Standards. Aber das war den Machern von web.py wohl ziemlich egal…
+Anmerkung: Ja, die Methodennamen sind wirklich in Großbuchstaben. Nein, das entspricht überhaupt nicht den gängigen Python-Standards. Aber das war den Machern von web.py wohl ziemlich egal…
 
 
 
@@ -93,7 +92,7 @@ Wenn man sich beim Endpoint *GET /hallo* einen Query-Parameter *name* erwartet, 
 ``````python
 class HalloHandler:
 	def GET(self):
-        name = web.input()["hallo"]
+        name = web.input()["name"]
 ``````
 
 Es gibt auch noch eine zweite Möglichkeit: Auf die Parameter kann auch wie auf die Attribute eines Objekts zugegriffen werden:
@@ -101,7 +100,7 @@ Es gibt auch noch eine zweite Möglichkeit: Auf die Parameter kann auch wie auf 
 ``````python
 class HalloHandler:
 	def GET(self):
-        name = web.input().hallo
+        name = web.input().name
 ``````
 
 
