@@ -142,6 +142,8 @@ Thymeleaf kann noch viel mehr, als in dieses Dokument passen würde. Auf der Thy
 
 ### Components und Beans
 
+(==TODO==: Dieser Teil muss noch ausgearbeitet werden…)
+
 
 
 ### Quellen
